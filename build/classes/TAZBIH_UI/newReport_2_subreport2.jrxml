@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="newReport_2_subreport2" language="groovy" pageWidth="572" pageHeight="752" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1cc4f416-2bc5-47c2-bc72-403ea5479266">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM CUSTOMER]]>
+	</queryString>
+	<field name="Name" class="java.lang.Object"/>
+	<field name="Address" class="java.lang.Object"/>
+	<field name="Contact" class="java.lang.Object"/>
+	<field name="Email" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="78">
+			<staticText>
+				<reportElement x="353" y="24" width="68" height="20" uuid="d06bc3e2-dc42-4fdd-9bee-d82a9c3b06bc"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email Add]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="24" width="68" height="20" uuid="87a17521-f061-400d-a3e3-a464b7d7c36d"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="427" y="24" width="131" height="20" uuid="e26fbe4b-85a3-46a1-98b6-101fc4a34bc5"/>
+				<textElement textAlignment="Center">
+					<font isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="24" width="177" height="20" uuid="da8d1c24-802f-4002-8f1a-e9d431b070a6"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="44" width="100" height="20" uuid="02408806-29bf-436c-81dc-d91089b975e7"/>
+				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="38" y="4" width="68" height="20" uuid="0d23e400-5bad-42a4-abc6-a8a82219b9f4"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="44" width="68" height="20" uuid="1ed53854-79c3-42ce-9662-2ee7c068640a"/>
+				<textElement>
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.]]></text>
+			</staticText>
+			<textField pattern="dd-MMM-yy">
+				<reportElement x="427" y="4" width="87" height="20" uuid="11f23b92-c3b8-4264-a13a-6f76818c4972"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="353" y="4" width="68" height="20" uuid="ff6a1e6e-671e-4bf5-9442-786c79e0769c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Calibri" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="119" y="4" width="100" height="20" uuid="edd0071f-8460-4cd3-9719-76007d107825"/>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>
